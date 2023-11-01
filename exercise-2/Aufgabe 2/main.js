@@ -54,44 +54,86 @@ function initTriangle() {
 	//TODO 3.1: Hier eure eigenen Positionen einfügen
 
 	positions = [
-		-1, -1,  1, // 0
-		1,  1,  1,  // 1
-		-1,  1,  1, // 2
-		1, -1,  1,  // 3
-		1,  1, -1,  // 4
-		1, -1, -1,  // 5
-		-1, 1, -1, // 6
-		-1, -1, -1, // 7
+		-1, -1,  1, // 0 red
+		1,  1,  1,  // 1 red
+		-1,  1,  1, // 2 red
+		1, -1,  1,  // 3 red
+
+		1,  1,  1,  // 4 green
+		1, -1,  1,  // 5 green
+		1,  1, -1,  // 6 green
+		1, -1, -1,  // 7 green
+
+		1, -1, -1, // 8 blue
+		-1,  1, -1, // 9 blue
+		-1, -1, -1, // 10 blue
+		1,  1, -1,  // 11 blue
+
+		-1, -1, -1, // 12 yellow
+		-1,  1,  1, // 13 yellow
+		-1,  1, -1, // 14 yellow
+		-1, -1,  1, // 15 yellow
+
+		-1, -1, -1, // 16 magenta
+		1, -1,  1, // 17 magenta
+		-1, -1,  1, // 18 magenta
+		1, -1, -1, // 19 magenta
+
+		-1,  1,  1, // 20 cyan
+		1,  1, -1, // 21 cyan
+		-1,  1, -1, // 22 cyan
+		1,  1,  1, // 23 cyan
 	];
 
 	// define triangles counter-clockwise is best practice
 	indices = [
 		0, 1, 2,	// Front, Red (1, 0, 0, 1)
 		0, 3, 1,
-		3, 4, 1,	// Right, Green (0, 1, 0, 1)
-		3, 5, 4,
-		5, 6, 7,	// Back, Blue (0, 0, 1, 1)
-		5, 4, 6,
-		7, 2, 6,	// Left, Yellow (1, 1, 0, 1)
-		7, 0, 2,
-		7, 3, 0,	// Bottom, Magenta (1, 0, 1, 1)
-		7, 5, 3,
-		2, 4, 6,	// Top,	Cyan (0, 1, 1, 1)
-		2, 1, 4
+		5, 6, 4,	// Right, Green (0, 1, 0, 1)
+		5, 7, 6,
+		8, 9, 10,	// Back, Blue (0, 0, 1, 1)
+		8, 11, 9,
+		12, 13, 14,	// Left, Yellow (1, 1, 0, 1)
+		12, 15, 13,
+		16, 17, 18,	// Bottom, Magenta (1, 0, 1, 1)
+		16, 19, 17,
+		20, 21, 22,	// Top,	Cyan (0, 1, 1, 1)
+		20, 23, 21
 	]
 
 	// TODO 1.1: Hier Farben des Würfels anpassen
 	// TODO 3.2: Hier so viele Farben einfügen, wie euer Objekt braucht, beispielsweise mit einer Schleife oder manuell
 	// targets positions vertices
 	colors = [
-		1, 0, 0, 1,  // Vertex 0: Red
-		0, 1, 0, 1,  // Vertex 1: Green
-		0, 0, 1, 1,  // Vertex 2: Blue
-		1, 1, 0, 1,  // Vertex 3: Yellow
-		1, 0, 1, 1,  // Vertex 4: Magenta
-		0, 1, 1, 1,  // Vertex 5: Cyan
-		0.5, 0.5, 0, 1,// Vertex 6: Brown
-		1, 0.5, 0, 1   // Vertex 7: Orange
+		1, 0, 0, 1,  // red
+		1, 0, 0, 1,
+		1, 0, 0, 1,
+		1, 0, 0, 1,
+
+		0, 1, 0, 1,  // green
+		0, 1, 0, 1,
+		0, 1, 0, 1,
+		0, 1, 0, 1,
+
+		0, 0, 1, 1,  // blue
+		0, 0, 1, 1,
+		0, 0, 1, 1,
+		0, 0, 1, 1,
+
+		1, 1, 0, 1,  // yellow
+		1, 1, 0, 1,
+		1, 1, 0, 1,
+		1, 1, 0, 1,
+
+		1, 0, 1, 1,  // magenta
+		1, 0, 1, 1,
+		1, 0, 1, 1,
+		1, 0, 1, 1,
+
+		0, 1, 1, 1,  // cyan
+		0, 1, 1, 1,
+		0, 1, 1, 1,
+		0, 1, 1, 1,
 	];
 
 	//TODO 2.2: Indices Array befüllen
