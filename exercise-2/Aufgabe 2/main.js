@@ -54,14 +54,14 @@ function initTriangle() {
 	//TODO 3.1: Hier eure eigenen Positionen einfügen
 
 	positions = [
-		-1, -0.9,  1, // 0
-		1,  0.9,  1,  // 1
-		-1,  0.9,  1, // 2
-		1, -0.9,  1,  // 3
-		1,  0.9, -1,  // 4
-		1, -0.9, -1,  // 5
-		-1,  0.9, -1, // 6
-		-1, -0.9, -1, // 7
+		-1, -1,  1, // 0
+		1,  1,  1,  // 1
+		-1,  1,  1, // 2
+		1, -1,  1,  // 3
+		1,  1, -1,  // 4
+		1, -1, -1,  // 5
+		-1, 1, -1, // 6
+		-1, -1, -1, // 7
 	];
 
 	// define triangles counter-clockwise is best practice
@@ -82,19 +82,16 @@ function initTriangle() {
 
 	// TODO 1.1: Hier Farben des Würfels anpassen
 	// TODO 3.2: Hier so viele Farben einfügen, wie euer Objekt braucht, beispielsweise mit einer Schleife oder manuell
+	// targets positions vertices
 	colors = [
-		0, 1, 1, 1,   0, 1, 1, 1,   0, 1, 1, 1, // Front
-		0, 1, 1, 1,   0, 1, 1, 1,   0, 1, 1, 1,
-		0, 1, 0, 1,   0, 1, 0, 1,   0, 1, 0, 1, // Right
-		0, 1, 0, 1,   0, 1, 0, 1,   0, 1, 0, 1,
-		0, 0, 1, 1,   0, 0, 1, 1,   0, 0, 1, 1, // Back
-		0, 0, 1, 1,   0, 0, 1, 1,   0, 0, 1, 1,
-		1, 1, 0, 1,   1, 1, 0, 1,   1, 1, 0, 1, // Left
-		1, 1, 0, 1,   1, 1, 0, 1,   1, 1, 0, 1,
-		1, 0, 1, 1,   1, 0, 1, 1,   1, 0, 1, 1, // Bottom
-		1, 0, 1, 1,   1, 0, 1, 1,   1, 0, 1, 1,
-		0, 1, 1, 1,   0, 1, 1, 1,   0, 1, 1, 1, // Top
-		0, 1, 1, 1,   0, 1, 1, 1,   0, 1, 1, 1
+		1, 0, 0, 1,  // Vertex 0: Red
+		0, 1, 0, 1,  // Vertex 1: Green
+		0, 0, 1, 1,  // Vertex 2: Blue
+		1, 1, 0, 1,  // Vertex 3: Yellow
+		1, 0, 1, 1,  // Vertex 4: Magenta
+		0, 1, 1, 1,  // Vertex 5: Cyan
+		0.5, 0.5, 0, 1,// Vertex 6: Brown
+		1, 0.5, 0, 1   // Vertex 7: Orange
 	];
 
 	//TODO 2.2: Indices Array befüllen
