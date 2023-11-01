@@ -66,17 +66,17 @@ function initTriangle() {
 
 	// define triangles counter-clockwise is best practice
 	indices = [
-		0, 1, 2,	// Front
+		0, 1, 2,	// Front, Red (1, 0, 0, 1)
 		0, 3, 1,
-		3, 4, 1,	// Right
+		3, 4, 1,	// Right, Green (0, 1, 0, 1)
 		3, 5, 4,
-		5, 6, 7,	// Back
+		5, 6, 7,	// Back, Blue (0, 0, 1, 1)
 		5, 4, 6,
-		7, 2, 6,	// Left
+		7, 2, 6,	// Left, Yellow (1, 1, 0, 1)
 		7, 0, 2,
-		7, 3, 0,	// Bottom
+		7, 3, 0,	// Bottom, Magenta (1, 0, 1, 1)
 		7, 5, 3,
-		2, 4, 6,	// Top
+		2, 4, 6,	// Top,	Cyan (0, 1, 1, 1)
 		2, 1, 4
 	]
 
