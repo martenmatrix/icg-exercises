@@ -57,7 +57,7 @@ function render() {
 
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-	gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_INT, 0);
+	gl.drawElements(gl.TRIANGLES, tree.indices.length, gl.UNSIGNED_INT, 0);
 }
 
 window.onload = function () {
