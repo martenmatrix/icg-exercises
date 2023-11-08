@@ -1,8 +1,9 @@
 let gl;
 let program;
-let posVBO,
-	indVBO,
-	colorVBO;
+let posTreeVBO,
+	indTreeVBO,
+	posCloudVBO,
+	indCloudVBO;
 
 function main() {
 	const canvas = document.getElementById("gl-canvas");
@@ -21,39 +22,26 @@ function main() {
 }
 
 function initBuffers() {
-	posVBO = gl.createBuffer();
-	gl.bindBuffer(gl.ARRAY_BUFFER, posVBO);
+	// Tree
+	posTreeVBO = gl.createBuffer();
+	gl.bindBuffer(gl.ARRAY_BUFFER, posTreeVBO);
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(tree.positions), gl.STATIC_DRAW);
 	gl.bindBuffer(gl.ARRAY_BUFFER, null);
 
-	indVBO = gl.createBuffer()
-	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indVBO)
+	indTreeVBO = gl.createBuffer()
+	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indTreeVBO)
 	gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint32Array(tree.indices), gl.STATIC_DRAW)
 	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, null)
 
-
-	/*
-	colorVBO = gl.createBuffer();
-	gl.bindBuffer(gl.ARRAY_BUFFER, colorVBO);
-	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
-	*/
 }
 
 function render() {
-	gl.bindBuffer(gl.ARRAY_BUFFER, posVBO);
+	gl.bindBuffer(gl.ARRAY_BUFFER, posTreeVBO);
 	const posLoc = gl.getAttribLocation(program, "vPosition");
 	gl.enableVertexAttribArray(posLoc);
 	gl.vertexAttribPointer(posLoc, 3, gl.FLOAT, false, 0, 0);
 
-	// Link data in VBO to shader variables
-	/*
-	gl.bindBuffer(gl.ARRAY_BUFFER, colorVBO);
-	const colorLoc = gl.getAttribLocation(program, "vColor");
-	gl.enableVertexAttribArray(colorLoc);
-	gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 0, 0);
-	*/
-
-	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indVBO);
+	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indTreeVBO);
 
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
